@@ -1,0 +1,14 @@
+class Solution {
+  static int stray(int[] numbers) {
+    // initialise odd number integer
+    int oddNum = 0;
+    // Loop through the array and if the current value at index i is larger or smaller than second integer in array, set off number to that
+    for (int i = 0; i < numbers.length; i++) {
+      int firstNum = numbers[1];
+      if (numbers[i] < firstNum || numbers[i] > firstNum) {
+        oddNum = numbers[i];
+      }
+    }
+    return oddNum;
+  }
+}
